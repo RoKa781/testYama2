@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  background-color: rgb(24, 24, 24);
+  text-align: left;
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 17px;
+  margin-left: 17px;
+}
+
+.main__title {
+  font-size: 34px;
+  font-weight: 400;
+  margin: 0;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.main__text-container {
+  padding-top: 33px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main__text-paragraph {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 170%;
+  margin: 0;
+}
+
+.main__img-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  height: 756px;
+  overflow: hidden;
+}
+
+.main__img-circle {
+  width: 191px;
+  height: 100px;
+  background-color: black;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  animation: enlarge 3s linear forwards;
+}
+
+@keyframes enlarge {
+  0% {
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+  }
+  10% {
+    width: 50px;
+    height: 25px;
+  }
+  20% {
+    width: 100px;
+    height: 50px;
+  }
+  30% {
+    width: 150px;
+    height: 75px;
+  }
+  40% {
+    width: 200px;
+    height: 100px;
+  }
+  50% {
+    width: 250px;
+    height: 125px;
+  }
+  60% {
+    width: 275px;
+    height: 130px;
+  }
+  70% {
+    width: 220px;
+    height: 110px;
+  }
+  80% {
+    width: 200px;
+    height: 100px;
+  }
+  90% {
+    width: 195px;
+    height: 100px;
+  }
+  100% {
+    width: 191px;
+    height: 100px;
+  }
+}
+
+
+
+.main__img-item {
+  position: absolute;
+  object-fit: cover;
+  width: 87%;
+  height: 756px;
+  left: 58%;
+  bottom: -100%;
+  transform: translate(-50%, 0%);
+  z-index: 2;
+}
+
+.main__say-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__say-img {
+  width: 100%;
+  height: 424px;
+  object-fit: cover;
+}
+
+.main__say_title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 38.65px;
+  font-weight: bold;
+  line-height: 90%;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.main__say_title-extra {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 61.42px;
+  font-weight: bold;
+  line-height: 90%;
+  margin-top: 9px;
+}
+
+.main__say_title-extra2 {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 49.86px;
+  font-weight: bold;
+  line-height: 90%;
+  margin-top: 14px;
+}
+
+.levitate {
+  animation: levitate 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes levitate {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  100% {
+    transform: translate(-50%, -10px);
+  }
+}
+
+@media (width > 320px) {
+  .main {
+    align-items: center;
+  }
+}
+
+@media (width > 900px) {
+  body {
+    background-color: #181818;
+    background-image: radial-gradient(circle, rgb(44, 44, 44, 0.5) 3px, transparent 0px);
+    background-size: 38px 30px;
+  }
+
+  .main {
+    height: 98vh;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 0;
+  }
+
+  .main__title {
+    font-size: 56px;
+    padding-top: 72px;
+    padding-left: 100px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .main__text-paragraph {
+    font-size: 14px;
+  }
+
+  .main__say-img {
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+    height: 100%;
+  }
+
+  .main__text-container {
+    padding-left: 100px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .main__img-container {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    height: 852px;
+  }
+
+
+  .main__img-item {
+    left: 35%;
+  }
+
+  .main__img-circle {
+    right: 17%;
+  }
+  .main__say_title {
+    padding-left: 100px;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    align-self: end;
+    padding-bottom: 86px;
+  }
+
+  .main__say_title-extra {
+    padding-left: 60px;
+    font-size: 61px;
+  }
+
+  .main__say_title-extra2 {
+    font-size: 61px;
+  }
+}
+
+@media (width > 1400px) {
+  .main__text-paragraph {
+    font-size: 22px;
+  }
+}
